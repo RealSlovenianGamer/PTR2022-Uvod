@@ -1,8 +1,9 @@
-//Določi input element za kasnejšo uporabo
-let input = document.getElementById('input')
-//Na začetku ustvari prazen array "denarnica" in spremenljivko "skupaj" z vrednostjo 0
+// Naloga 1 - Cin Cin Cekin - Marko Medvešek
+let input = document.getElementById('input') //Določi input element  za kasnejšo uporabo
+//Na začetku ustvari prazen array "denarnica" in spremenljivko "skupaj" z vrednostjo 0 za kasnejšo uporabo
 let denarnica = [];
 var skupaj = 0
+const count = {};
 
 //ob kliku gumba "shrani" se sproži funkcija
 function poberiInput(){
@@ -25,6 +26,17 @@ function poberiInput(){
         '<li>20€: ' + st20 + 'x</li> ' +
         '<li><b>Skupaj: </b>' + skupaj + '€</li>' +
         '</ul>';
+        //Spodnji del kode bi bil za dodatne točke vendar nimam časa (ker je še 5 nalog pred mano), da bi raziskal še kako se dokonča še prikaz :)
+        for (const element of denarnica) {
+        if (count[element]) {
+            count[element] += 1;
+        } else {
+            count[element] = 1;
+        }
+        }
+        console.log(count);
     }
 }
-//
+
+
+
